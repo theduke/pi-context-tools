@@ -11,7 +11,7 @@ It exposes two tools:
 
 Together, these tools let agents inspect their own context usage and compact it
 on demand, without waiting for auto-compaction or requiring the user to run
-`/compact` manually. 
+`/compact` manually.
 
 This is especially useful for orchestration agents that coordinate subagents
 or run long multi-step workflows.
@@ -27,8 +27,8 @@ pi install git:github.com/theduke/pi-context-tools
 
 ## Usage
 
-Instruct agents to the `context_info` tool to get information about the current
-context, and the `compact_context` to compact the context.
+Instruct agents to use the `context_info` tool to get information about the
+current context, and `compact_context` to compact the context.
 
 ## Development
 

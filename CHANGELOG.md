@@ -7,13 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Added
-
-- Renamed the package to `pi-context-tools` to better reflect the context-focused workflow.
-- Added the `context_info` tool for inspecting current context usage alongside `compact_context`.
+Nothing yet.
 
 ## [0.1.0] - 2026-05-09
 
 ### Added
 
-- Introduced the `compact_context` tool, which triggers `ctx.compact()` to compact the current session context.
+- Introduced the `compact_context` tool, which schedules compaction after the current turn finishes.
+- Added the `context_info` tool for inspecting current context usage alongside `compact_context`.
