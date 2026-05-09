@@ -37,3 +37,21 @@ npm install
 npm run typecheck
 npm run lint
 ```
+
+For local compaction testing, this repo can use project-local pi settings in
+`.pi/settings.json`:
+
+```json
+{
+  "compaction": {
+    "keepRecentTokens": 500
+  }
+}
+```
+
+`keepRecentTokens` is only the target for how much recent conversation pi keeps
+after summarizing older entries. The reported context size after compaction will
+usually be higher because it also includes the system prompt, tool definitions,
+the generated compaction summary, and any messages sent after compaction. This is
+expected when debugging `compact_context` and does not by itself mean compaction
+failed.
