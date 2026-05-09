@@ -1,13 +1,13 @@
 {
   "name": "pi-context-tools",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A pi extension for compacting and inspecting agent context.",
   "type": "module",
   "license": "MIT",
   "author": "theduke",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/theduke/pi-context-tools.git"
+    "url": "https://github.com/theduke/pi-context-tools.git"
   },
   "keywords": [
     "pi-package",

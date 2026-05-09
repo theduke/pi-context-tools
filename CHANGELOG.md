@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Nothing yet.
 
+## [0.1.1] - 2026-05-10
+
+### Changed
+
+- Updated package metadata to use an HTTPS repository URL.
+
 ## [0.1.0] - 2026-05-09
 
 ### Added
