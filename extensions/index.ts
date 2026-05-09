@@ -16,4 +16,46 @@ export default function (pi: ExtensionAPI) {
       };
     },
   });
+
+  pi.registerTool({
+    name: "context_info",
+    label: "Context Info",
+    description: "Report the current context length for the active model.",
+    parameters: Type.Object({}),
+    async execute(_toolCallId, _params, _signal, _onUpdate, ctx) {
+      const usage = ctx.getContextUsage();
+
+      if (!usage) {
+        return {
+          content: [{ type: "text", text: "Context usage is unavailable right now." }],
+          details: {},
+        };
+      }
+
+      return {
+        content: [
+          {
+            type: "text",
+            text:
+              usage.percent === null
+                ? `Current context length: ${usage.tokens} tokens.`
+                : `Current context length: ${usage.tokens} tokens (${usage.percent.toFixed(1)}% of maximum context window).`,
+          },
+        ],
+        details:
+          usage.percent === null
+            ? {
+                tokens: usage.tokens,
+                contextWindow: usage.contextWindow,
+                usage,
+              }
+            : {
+                tokens: usage.tokens,
+                percent: usage.percent,
+                contextWindow: usage.contextWindow,
+                usage,
+              },
+      };
+    },
+  });
 }
