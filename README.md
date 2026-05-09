@@ -1,31 +1,34 @@
-# pi-compact-tool
+# pi-context-tools
 
-`pi-compact-tool` is a tiny [pi](https://pi.dev) coding agent extension that
-exposes a single tool: `compact_context`.
+`pi-context-tools` is a tiny [pi](https://pi.dev) coding agent extension that
+allows agents to inspect and compact their own context.
 
-When the tool is called, it triggers compaction of the current session context.
+It exposes two tools:
 
-This allows models to manage their own context, without needing to wait for
-auto-compaction or the user manually triggering `/compact`, and is
-especially useful for orchestration agents that manage subagents and run
-multi-step workflows.
+- `context_info` reports the current context usage, including token count and
+  available context-window details.
+- `compact_context` triggers compaction of the current session context.
+
+Together, these tools let agents inspect their own context usage and compact it
+on demand, without waiting for auto-compaction or requiring the user to run
+`/compact` manually. 
+
+This is especially useful for orchestration agents that coordinate subagents
+or run long multi-step workflows.
 
 ## Install
 
 Install the published package with `pi install`:
 
 ```bash
-pi install npm:pi-compact-tool
-pi install git:github.com/theduke/pi-compact-tool
+pi install npm:pi-context-tools
+pi install git:github.com/theduke/pi-context-tools
 ```
 
 ## Usage
 
-```bash
-pi -e .
-```
-
-Then ask the agent to use the `compact_context` tool when you want the current conversation compacted.
+Instruct agents to the `context_info` tool to get information about the current
+context, and the `compact_context` to compact the context.
 
 ## Development
 
