@@ -1,0 +1,54 @@
+{
+  "name": "pi-compact-tool",
+  "version": "0.1.0",
+  "description": "A pi extension providing a 'compact_context' tool to agents.",
+  "type": "module",
+  "license": "MIT",
+  "author": "theduke",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:theduke/pi-compact-tool"
+  },
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-coding-agent",
+    "compact",
+    "context"
+  ],
+  "files": [
+    "extensions",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"No tests yet\" && exit 0",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "typecheck": "tsc --noEmit"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions"
+    ]
+  },
+  "peerDependencies": {
+    "@mariozechner/pi-agent-core": "*",
+    "@mariozechner/pi-ai": "*",
+    "@mariozechner/pi-coding-agent": "*",
+    "@mariozechner/pi-tui": "*",
+    "typebox": "*"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.14",
+    "@mariozechner/pi-ai": "^0.70.0",
+    "@mariozechner/pi-coding-agent": "^0.70.0",
+    "typebox": "^1.1.24",
+    "typescript": "^5.0.0"
+  }
+}
