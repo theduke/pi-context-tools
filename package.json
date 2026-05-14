@@ -1,6 +1,6 @@
 {
   "name": "pi-context-tools",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "A pi extension for compacting and inspecting agent context.",
   "type": "module",
   "license": "MIT",

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.0.0 (2026-05-14)
+
+
+### Features
+
+* Add context_info tool ([a04cb87](https://github.com/theduke/pi-context-tools/commit/a04cb8763c9ba56eaea297fc23cbb18af4e57186))
+
 ## [Unreleased]
 
 Nothing yet.
