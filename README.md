@@ -1,5 +1,7 @@
 # pi-context-tools
 
+Pi package: https://pi.dev/packages/pi-context-tools
+
 `pi-context-tools` is a tiny [pi](https://pi.dev) coding agent extension that
 allows agents to inspect and compact their own context.
 
